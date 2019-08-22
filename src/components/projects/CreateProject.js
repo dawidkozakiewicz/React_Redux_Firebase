@@ -14,7 +14,7 @@ class CreateProject extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(this.state);
+    console.log(this.props)
     this.props.createProject(this.state);
   }
   render() {
@@ -46,3 +46,13 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(null, mapDispatchToProps)(CreateProject)
+
+// const createProject = (project) => {
+//   return (dispatch, getState) => {
+
+
+//       // make async call to database
+
+//       dispatch({ type: 'CREATE_PROJECT', project: project })
+//   }
+// };
